@@ -1,35 +1,33 @@
-# Mega Movies
+# Markdown Converter
 
-> A Vue.js project
-
-
-## Build Setup
-
-I decided to build this project in Vue JS due to the frameworks suitability for the task in hand. Vue JS is something I am picking up with each project so my approach may not be perfect – I am looking to improve here. I spent most time writing logic and less time on 
-proper semantic HTML & CSS. 
-
-I had a few problems with the Movie API, I couldn’t pull through the exact dataset required due to a key issue (it was saying I didn’t have permissions with my key). It was slightly baffling at the time so I moved on and pulled through a similar dataset and continued (with exactly the same key).
-
-The UI is basic, the CSS/SASS is not setup correctly and there wasn’t really any thought of browser compatibility, responsive layouts etc. I used Chrome on a desktop only. It looks functional to me.
-
-Webpack was used to bundle, this was the first time I have used this in all honesty. I liked it mostly! But it was a first effort so If I have done anything stupid here that is why.
- 
+> A PHP CLi App
 
 
-## Build Setup
+## Running the App
+
+Here is a simple App to convert markdown files into HTML counterparts. 
+
+I have spent approximately 2 hours as requested. I have managed to get most parts working correctly – but I would expect thorough testing would show a few improvements needed. I have focused on the basics to demonstrate my methodology and coding style. That said: I would expect parts of the code could to refactored.
+
+## Things I didn’t complete
+
+PHP error logging. How would I go about this if I had time? (this probably wouldn’t take that long). Install an error logging library like monolog. Then from within parts of the apps code particularly i.e. line 87 write an error message to be logged. 
+
+I have a feeling the configuration options are not as specified (S3, FTP). I am simply asking the user to define a upload location (e.g. ./uploads). I suspect you where perhaps after a programmatic configuration. That wouldn’t be a problem, I would just setup the object to accept certain parameters i.e 
 
 ``` bash
-# install dependencies
-npm install
+$convertMarkdown->config(username, password, connectionType, uploadPath);
+$convertMarkdown = new ConvertMarkdown();
+$convertMarkdown->mainMenu();
 
-# serve with hot reload at localhost:8080
-npm run dev
+ 
 
-# build for production with minification
-npm run build
+## Running the App
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+``` bash
+# Command line
+php -f markdown-converter.php
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
