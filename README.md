@@ -16,9 +16,10 @@ PHP error logging. How would I go about this if I had time? (this probably would
 I have a feeling the configuration options are not as specified (S3, FTP). I am simply asking the user to define a upload location (e.g. ./uploads). I suspect you where perhaps after a programmatic configuration. That wouldn’t be a problem, I would just setup the object to accept certain parameters i.e 
 
 ``` bash
-$convertMarkdown->config(username, password, connectionType, uploadPath);
 $convertMarkdown = new ConvertMarkdown();
+$convertMarkdown->config(username, password, connectionType, uploadPath);
 $convertMarkdown->mainMenu();
+
 ```
  
 
