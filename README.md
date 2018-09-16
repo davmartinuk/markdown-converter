@@ -19,7 +19,7 @@ I have a feeling the configuration options are not as specified (S3, FTP). I am 
 $convertMarkdown->config(username, password, connectionType, uploadPath);
 $convertMarkdown = new ConvertMarkdown();
 $convertMarkdown->mainMenu();
-
+```
  
 
 ## Running the App
@@ -27,7 +27,7 @@ $convertMarkdown->mainMenu();
 ``` bash
 # Command line
 php -f markdown-converter.php
-
+```
 
 
 
